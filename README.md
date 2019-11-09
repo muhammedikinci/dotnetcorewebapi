@@ -1,9 +1,21 @@
 # Web Api
 
-Swagger entegresi mevcut.
+- MsSql veritabanını kullanıyor. ConnectionString e WebApi projesi içerisinde application.json dan ulaşabiliriz.
 
+- LocalDB kullanıyor.
+
+```json
+  "ConnectionStrings": {
+    "WebApiDBString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WebApi;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+  },
+```
+
+- Swagger entegresi mevcut.
+
+```json
 /swagger/index.html <br>
 /swagger/v1/swagger.json
+```
 
 # Api Dökümantasyonu
 ## Ogrenci EndPoint
