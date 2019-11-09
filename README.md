@@ -1,8 +1,6 @@
 # Web Api
 
-- MsSql veritabanını kullanıyor. ConnectionString e WebApi projesi içerisinde application.json dan ulaşabiliriz.
-
-- LocalDB kullanıyor.
+MsSql veritabanını kullanıyor(LocalDB). ConnectionString e WebApi projesi içerisinde application.json dan ulaşabiliriz.
 
 ```json
   "ConnectionStrings": {
@@ -10,12 +8,20 @@
   },
 ```
 
-- Swagger entegresi mevcut.
+Swagger entegresi mevcut.
 
 ```json
 /swagger/index.html
 /swagger/v1/swagger.json
 ```
+
+Vagrant desteği eklendi. Ana klasörede `vagrant up` komutu ile sanal makineyi ayağa kaldırabiliriz.
+Startup.cs içerisinde LocalDB yorum satırına alındı ve vagrant içerisinde direk çalışabilmesi için InMemoryDB ye geçildi.
+```
+//services.AddDbContext<IWebApiDBContext, WebApiDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("WebApiDBString")));
+services.AddDbContext<IWebApiDBContext, WebApiDBContext>(options => options.UseInMemoryDatabase("WebApiDBString"));
+```
+![alt](https://image.prntscr.com/image/MAUFIBKjSeefF5adZJF8ZA.png)
 
 # Api Dökümantasyonu
 ## Ogrenci EndPoint
