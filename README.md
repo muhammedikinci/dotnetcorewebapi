@@ -13,7 +13,7 @@
 - Swagger entegresi mevcut.
 
 ```json
-/swagger/index.html <br>
+/swagger/index.html
 /swagger/v1/swagger.json
 ```
 
