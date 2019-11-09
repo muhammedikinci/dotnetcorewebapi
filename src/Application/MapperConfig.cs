@@ -44,6 +44,7 @@ namespace Application
 
             CreateMap<Domain.Entities.Okul, Models.Okul>();
             CreateMap<Models.Okul, Domain.Entities.Okul>();
+            CreateMap<Models.OkulUpdate, Domain.Entities.Okul>();
         }
     }
 }

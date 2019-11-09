@@ -47,7 +47,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Okul value)
+        public IActionResult Put(int id, [FromBody] OkulUpdate value)
         {
             var currentData = okulRepository.Where((okul) => okul._id == id).FirstOrDefault();
 
